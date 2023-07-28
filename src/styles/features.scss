@@ -1,0 +1,40 @@
+@import "./base";
+@import "./typography";
+
+.features {
+  grid-column: center-start / center-end;
+
+  margin: 15rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  align-items: start;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 5rem 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    display: flex;
+    align-items: stat;
+    justify-content: center;
+    color: $color-primary;
+    font-size: 4.5rem;
+    // grid-row: 1 / span 2; // implicit grid (when grid rows/column not applied )
+    grid-row: 1 / -1; // explicit grid (when grid rows/column applied)
+    transform: translateY(-1rem);
+
+    &--key {
+      transform: rotate(-40deg);
+    }
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+}

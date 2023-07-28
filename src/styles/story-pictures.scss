@@ -1,0 +1,7 @@
+@import "./base";
+@import "./typography";
+
+.story__pictures {
+  background-color: $color-primary;
+  grid-column: full-start / col-end 4;
+}
